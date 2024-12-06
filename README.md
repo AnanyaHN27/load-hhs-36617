@@ -84,8 +84,25 @@ This can be run like this:
 python load-quality.py 2021-07-01 Hospital_General_Information-2021-07
 ```
 
+### 4. `load_dashboard.sh`
+This script runs the reporting dashboard using Streamlit. The dashboard visualizes the data loaded into the PostgreSQL database, allowing users to explore hospital logistics, quality metrics, and other key data points.
+
+This can be run like this:
+  ```bash
+bash load_dashboard.sh
+```
+
+This script performs the following steps:
+
+- Executes reporting_dashboard.py with Python to pre-check dependencies or prepare the environment.
+- Launches the Streamlit dashboard using
+
+Open the link provided by Streamlit in your browser to view the dashboard.
+
 ## Setup Instructions
 1. Ensure that all dependencies are installed.
 2. Create a file `credentials.py` with 2 variables: `DB_USER` and `DB_PASSWORD` and ensure these are set with your personal database credentials.
 3. Run the `create-tables.py` script.
 4. Run the `load-hhs.py` and `load-quality.py` scripts.
+5. Launch the dashboard using the load_dashboard.sh script.
+
